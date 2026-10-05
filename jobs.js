@@ -3,7 +3,7 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const ADZUNA_APP_ID = process.env.ADZUNA_APP_ID;
 const ADZUNA_APP_KEY = process.env.ADZUNA_APP_KEY;
 const MAX_JOBS = 10;
-const LOOKBACK_HOURS = 24;
+const LOOKBACK_HOURS = 1;
 const UA = { "User-Agent": "Mozilla/5.0" };
 const NA = "Not mentioned";
 
@@ -138,11 +138,16 @@ const SOURCES = [
 function formatJob(j) {
   const v = (x) => esc(x && String(x).trim() ? String(x).trim() : NA);
   const lines = [
-    `💼 <b>${v(j.title)}</b>`,
+    `💼 <b><u>${v(j.title)}</u></b>`,
+
     `🏢 Company: ${v(j.company)}`,
+
     `📍 Location: ${v(j.location)}`,
+
     `💰 Salary: ${v(j.salary)}`,
+
     `🛠 Skills / Category: ${v(j.skills)}`,
+
     `🔗 Apply: ${esc(j.link)}`,
   ];
   if (j.source === "Adzuna") lines.push("Jobs by Adzuna");
