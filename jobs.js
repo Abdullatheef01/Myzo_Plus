@@ -140,15 +140,12 @@ function formatJob(j) {
   const lines = [
     `💼 <b><u>${v(j.title)}</u></b>`,
 
-    `🏢 Company: ${v(j.company)}`,
+    `<b>🏢 Company:</b> ${v(j.company)}`,
+    `<b>📍 Location:</b> ${v(j.location)}`,
+    `<b>💰 Salary:</b> ${v(j.salary)}`,
+    `<b>🛠 Skills / Category:</b>> ${v(j.skills)}`,
 
-    `📍 Location: ${v(j.location)}`,
-
-    `💰 Salary: ${v(j.salary)}`,
-
-    `🛠 Skills / Category: ${v(j.skills)}`,
-
-    `🔗 Apply: ${esc(j.link)}`,
+    `<b>🔗 Apply:</b> ${esc(j.link)}`,
   ];
   if (j.source === "Adzuna") lines.push("Jobs by Adzuna");
   return lines.join("\n");
