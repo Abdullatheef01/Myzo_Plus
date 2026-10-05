@@ -3,7 +3,7 @@ const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const ADZUNA_APP_ID = process.env.ADZUNA_APP_ID;
 const ADZUNA_APP_KEY = process.env.ADZUNA_APP_KEY;
 const MAX_JOBS = 10;
-const LOOKBACK_HOURS = 1;
+const LOOKBACK_HOURS = 24;
 const UA = { "User-Agent": "Mozilla/5.0" };
 const NA = "Not mentioned";
 
