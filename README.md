@@ -1,4 +1,5 @@
 <div align="center">
+<img width="100" height="100"  alt="Myzo-Pluse" src="https://github.com/user-attachments/assets/c0e50451-5dda-4996-a94f-f68646ff3ded" />
 
 # MYZO PLUS
 
